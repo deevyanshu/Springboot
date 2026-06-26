@@ -1,0 +1,53 @@
+package com.example.hospitalmanagement.Entity;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.MapsId;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Doctor {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private String specialization;
+
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @OneToOne
+    @MapsId
+    private User user;
+
+    @OneToMany(mappedBy = "doctor")
+    private List<Appointment> appointments=new ArrayList<>();
+
+    @ManyToMany(mappedBy = "doctors")
+    private Set<Department> departments=new HashSet<>();
+}

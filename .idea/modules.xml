@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Spring.iml" filepath="$PROJECT_DIR$/.idea/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/airbnb-clone/airbnb-clone.iml" filepath="$PROJECT_DIR$/airbnb-clone/airbnb-clone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/angularcrud/angularcrud.iml" filepath="$PROJECT_DIR$/angularcrud/angularcrud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/angularlogin/angularlogin.iml" filepath="$PROJECT_DIR$/angularlogin/angularlogin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Hotel/apigateway/apigateway.iml" filepath="$PROJECT_DIR$/microservice/Hotel/apigateway/apigateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audiotranscribe/audiotranscribe.iml" filepath="$PROJECT_DIR$/audiotranscribe/audiotranscribe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookingsystem/bookingsystem.iml" filepath="$PROJECT_DIR$/bookingsystem/bookingsystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contact/contact.iml" filepath="$PROJECT_DIR$/contact/contact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Contacts/contacts/contacts.iml" filepath="$PROJECT_DIR$/microservice/Contacts/contacts/contacts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crud/crud.iml" filepath="$PROJECT_DIR$/crud/crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/elasticsearch/elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/elasticsearch/elasticsearch/elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/email-generator/email-generator.iml" filepath="$PROJECT_DIR$/email-generator/email-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/employeemanagement/employeemanagement.iml" filepath="$PROJECT_DIR$/employeemanagement/employeemanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Contacts/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/microservice/Contacts/eurekaserver/eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exceptionhandling/exceptionhandling.iml" filepath="$PROJECT_DIR$/exceptionhandling/exceptionhandling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Contacts/gateway/gateway.iml" filepath="$PROJECT_DIR$/microservice/Contacts/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geminichat/geminichat.iml" filepath="$PROJECT_DIR$/geminichat/geminichat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospitalmanagement/hospitalmanagement.iml" filepath="$PROJECT_DIR$/hospitalmanagement/hospitalmanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Hotel/hotelservice/hotelservice.iml" filepath="$PROJECT_DIR$/microservice/Hotel/hotelservice/hotelservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa/jpa.iml" filepath="$PROJECT_DIR$/jpa/jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mapping/mapping.iml" filepath="$PROJECT_DIR$/mapping/mapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/polling/polling.iml" filepath="$PROJECT_DIR$/polling/polling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Hotel/ratingservice/ratingservice.iml" filepath="$PROJECT_DIR$/microservice/Hotel/ratingservice/ratingservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/responseentity/responseentity.iml" filepath="$PROJECT_DIR$/responseentity/responseentity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scm2/scm2.iml" filepath="$PROJECT_DIR$/scm2/scm2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Hotel/serviceregistry/serviceregistry.iml" filepath="$PROJECT_DIR$/microservice/Hotel/serviceregistry/serviceregistry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springrest/springrest.iml" filepath="$PROJECT_DIR$/springrest/springrest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springsecurity/springsecurity.iml" filepath="$PROJECT_DIR$/springsecurity/springsecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo/todo.iml" filepath="$PROJECT_DIR$/todo/todo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/urlshortner/urlshortner.iml" filepath="$PROJECT_DIR$/urlshortner/urlshortner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Contacts/user/user.iml" filepath="$PROJECT_DIR$/microservice/Contacts/user/user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/Hotel/userservice/userservice.iml" filepath="$PROJECT_DIR$/microservice/Hotel/userservice/userservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/validation/validation.iml" filepath="$PROJECT_DIR$/validation/validation.iml" />
+    </modules>
+  </component>
+</project>

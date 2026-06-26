@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="scm2" />
+        <module name="userservice" />
+        <module name="exceptionhandling" />
+        <module name="springsecurity" />
+        <module name="airbnb-clone" />
+        <module name="responseentity" />
+        <module name="crud" />
+        <module name="eurekaserver" />
+        <module name="bookingsystem" />
+        <module name="ratingservice" />
+        <module name="angularlogin" />
+        <module name="contact" />
+        <module name="springrest" />
+        <module name="jpa" />
+        <module name="validation" />
+        <module name="hotelservice" />
+        <module name="mapping" />
+        <module name="serviceregistry" />
+        <module name="todo" />
+        <module name="apigateway" />
+        <module name="user" />
+        <module name="gateway" />
+        <module name="contacts" />
+      </profile>
+      <profile name="Annotation profile for hospitalmanagement" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="audiotranscribe" />
+        <module name="urlshortner" />
+        <module name="employeemanagement" />
+        <module name="email-generator" />
+        <module name="elasticsearch" />
+        <module name="angularcrud" />
+        <module name="hospitalmanagement" />
+        <module name="geminichat" />
+        <module name="polling" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="airbnb-clone" target="17" />
+      <module name="angularcrud" target="17" />
+      <module name="angularlogin" target="17" />
+      <module name="apigateway" target="17" />
+      <module name="audiotranscribe" target="17" />
+      <module name="bookingsystem" target="17" />
+      <module name="contact" target="17" />
+      <module name="contacts" target="17" />
+      <module name="crud" target="17" />
+      <module name="elasticsearch" target="17" />
+      <module name="email-generator" target="17" />
+      <module name="employeemanagement" target="17" />
+      <module name="eurekaserver" target="17" />
+      <module name="exceptionhandling" target="17" />
+      <module name="gateway" target="17" />
+      <module name="geminichat" target="17" />
+      <module name="hospitalmanagement" target="17" />
+      <module name="hotelservice" target="17" />
+      <module name="jpa" target="17" />
+      <module name="mapping" target="17" />
+      <module name="polling" target="17" />
+      <module name="ratingservice" target="17" />
+      <module name="responseentity" target="17" />
+      <module name="scm2" target="17" />
+      <module name="serviceregistry" target="17" />
+      <module name="springrest" target="17" />
+      <module name="springsecurity" target="17" />
+      <module name="todo" target="17" />
+      <module name="urlshortner" target="17" />
+      <module name="user" target="17" />
+      <module name="userservice" target="17" />
+      <module name="validation" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="airbnb-clone" options="-parameters" />
+      <module name="angularcrud" options="-parameters" />
+      <module name="angularlogin" options="-parameters" />
+      <module name="apigateway" options="-parameters" />
+      <module name="audiotranscribe" options="-parameters" />
+      <module name="bookingsystem" options="-parameters" />
+      <module name="contact" options="-parameters" />
+      <module name="contacts" options="-parameters" />
+      <module name="crud" options="-parameters" />
+      <module name="elasticsearch" options="-parameters" />
+      <module name="email-generator" options="-parameters" />
+      <module name="employeemanagement" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
+      <module name="exceptionhandling" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="geminichat" options="-parameters" />
+      <module name="hospitalmanagement" options="-parameters" />
+      <module name="hotelservice" options="-parameters" />
+      <module name="jpa" options="-parameters" />
+      <module name="mapping" options="-parameters" />
+      <module name="polling" options="-parameters" />
+      <module name="ratingservice" options="-parameters" />
+      <module name="responseentity" options="-parameters" />
+      <module name="scm2" options="-parameters" />
+      <module name="serviceregistry" options="-parameters" />
+      <module name="springrest" options="-parameters" />
+      <module name="springsecurity" options="-parameters" />
+      <module name="todo" options="-parameters" />
+      <module name="urlshortner" options="-parameters" />
+      <module name="user" options="-parameters" />
+      <module name="userservice" options="-parameters" />
+      <module name="validation" options="-parameters" />
+    </option>
+  </component>
+</project>

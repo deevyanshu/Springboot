@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/crud/pom.xml" />
+        <option value="$PROJECT_DIR$/scm2/pom.xml" />
+        <option value="$PROJECT_DIR$/todo/pom.xml" />
+        <option value="$PROJECT_DIR$/contact/pom.xml" />
+        <option value="$PROJECT_DIR$/mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/polling/pom.xml" />
+        <option value="$PROJECT_DIR$/geminichat/pom.xml" />
+        <option value="$PROJECT_DIR$/springrest/pom.xml" />
+        <option value="$PROJECT_DIR$/validation/pom.xml" />
+        <option value="$PROJECT_DIR$/angularcrud/pom.xml" />
+        <option value="$PROJECT_DIR$/urlshortner/pom.xml" />
+        <option value="$PROJECT_DIR$/airbnb-clone/pom.xml" />
+        <option value="$PROJECT_DIR$/angularlogin/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Hotel/apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Hotel/userservice/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Hotel/hotelservice/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Hotel/ratingservice/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Hotel/serviceregistry/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Contacts/user/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Contacts/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Contacts/contacts/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice/Contacts/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/bookingsystem/pom.xml" />
+        <option value="$PROJECT_DIR$/elasticsearch/elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/responseentity/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurity/pom.xml" />
+        <option value="$PROJECT_DIR$/audiotranscribe/pom.xml" />
+        <option value="$PROJECT_DIR$/email-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/exceptionhandling/pom.xml" />
+        <option value="$PROJECT_DIR$/employeemanagement/pom.xml" />
+        <option value="$PROJECT_DIR$/hospitalmanagement/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+</project>
