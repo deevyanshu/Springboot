@@ -1,7 +1,9 @@
 package com.deevyanshu.empl.service.impl;
 
+import com.deevyanshu.empl.Client.AddressClient;
 import com.deevyanshu.empl.Exception.BadRequestException;
 import com.deevyanshu.empl.Exception.ResourceNotFoundException;
+import com.deevyanshu.empl.model.dto.AddressDto;
 import com.deevyanshu.empl.model.dto.EmployeeDto;
 import com.deevyanshu.empl.model.entity.Employee;
 import com.deevyanshu.empl.repository.EmployeeRepository;
@@ -18,9 +20,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final ModelMapper modelMapper;
 
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository, ModelMapper modelMapper) {
+    private final AddressClient addressClient;
+
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository, ModelMapper modelMapper,AddressClient addressClient) {
         this.employeeRepository = employeeRepository;
         this.modelMapper=modelMapper;
+        this.addressClient=addressClient;
     }
 
     @Override
@@ -62,9 +67,18 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public EmployeeDto getSingleEmployee(Long id) {
         Employee employee=employeeRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("not found"));
+        EmployeeDto dto=modelMapper.map(employee, EmployeeDto.class);
 
-
-        return modelMapper.map(employee, EmployeeDto.class);
+        // we are using try catch because we do not want to throw exception if no addresses found for
+        // employee, we just want to return employee details with or without addresses
+        try{
+            List<AddressDto> addresses=addressClient.getAddressByEmpId(id);
+            dto.setAddressDto(addresses);
+        }catch (Exception e)
+        {
+            System.out.println("no addresses found");
+        }
+        return dto;
     }
 
     @Override
@@ -74,8 +88,18 @@ public class EmployeeServiceImpl implements EmployeeService {
         {
             throw new ResourceNotFoundException("no employees found");
         }
-        List<EmployeeDto> employees=all.stream().map(emp -> modelMapper.map(emp, EmployeeDto.class)).toList();
-        return employees;
+        List<EmployeeDto> employeesdto=all.stream().map(emp -> modelMapper.map(emp, EmployeeDto.class)).toList();
+        for(EmployeeDto employeeDto:employeesdto)
+        {
+            try{
+                List<AddressDto> addresses=addressClient.getAddressByEmpId(employeeDto.getId());
+                employeeDto.setAddressDto(addresses);
+            }catch (Exception e)
+            {
+                System.out.println("no addresses found");
+            }
+        }
+        return employeesdto;
     }
 
     @Override

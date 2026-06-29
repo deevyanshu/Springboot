@@ -48,4 +48,10 @@ public class AddressController {
         addressService.deleteAddress(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @GetMapping("/emp/{empId}")
+    public ResponseEntity<List<AddressDto>> getAddressByEmpId(@PathVariable Long empId) {
+        List<AddressDto> addressDtos = addressService.getAddressByEmpId(empId);
+        return new ResponseEntity<>(addressDtos, HttpStatus.OK);
+    }
 }

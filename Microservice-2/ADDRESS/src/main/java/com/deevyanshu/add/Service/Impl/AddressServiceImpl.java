@@ -3,9 +3,11 @@ package com.deevyanshu.add.Service.Impl;
 import com.deevyanshu.add.Exception.ResourceNotFoundException;
 import com.deevyanshu.add.Repository.AddressRepository;
 import com.deevyanshu.add.Service.AddressService;
+import com.deevyanshu.add.client.EmployeeClient;
 import com.deevyanshu.add.model.Dto.AddressDto;
 import com.deevyanshu.add.model.Dto.AddressRequest;
 import com.deevyanshu.add.model.Dto.AddressRequestDto;
+import com.deevyanshu.add.model.Dto.EmployeeDto;
 import com.deevyanshu.add.model.Entity.Address;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -20,22 +22,27 @@ public class AddressServiceImpl implements AddressService {
     private final AddressRepository addressRepository;
     private final ModelMapper modelMapper;
 
-    public AddressServiceImpl(AddressRepository addressRepository, ModelMapper modelMapper) {
+    private final EmployeeClient employeeClient;
+
+    public AddressServiceImpl(AddressRepository addressRepository, ModelMapper modelMapper, EmployeeClient employeeClient) {
         this.addressRepository = addressRepository;
         this.modelMapper = modelMapper;
+        this.employeeClient = employeeClient;
     }
 
     @Override
     public List<AddressDto> saveAddress(AddressRequest addressRequest) {
-        //TODO: check if employee exists or not
+        //the exception will be checked in employee service, if employee not found then it will throw
+        // exception. here it is handled by Feign client by implementing errordecoder.
+        // So no need to check here.
+        employeeClient.getSingleEmployee(addressRequest.getEmpId());
         List<Address> savedAddresses=addressRepository.saveAll(this.saveOrUpdateAddressRequest(addressRequest));
         return savedAddresses.stream().map(address -> modelMapper.map(address, AddressDto.class)).toList();
     }
 
     @Override
     public List<AddressDto> updateAddress(AddressRequest addressRequest) {
-        //TODO: check if employee exists or not
-
+        employeeClient.getSingleEmployee(addressRequest.getEmpId());
         List<Address> addressByEmpId=addressRepository.findAllByEmpId(addressRequest.getEmpId());
 
         if(addressByEmpId.isEmpty())
@@ -81,6 +88,17 @@ public class AddressServiceImpl implements AddressService {
     public void deleteAddress(Long id) {
         Address address=addressRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("not found"));
         addressRepository.delete(address);
+    }
+
+    @Override
+    public List<AddressDto> getAddressByEmpId(Long empId) {
+        employeeClient.getSingleEmployee(empId);
+        List<Address> addressList=addressRepository.findAllByEmpId(empId);
+        if(addressList.isEmpty())
+        {
+            throw new ResourceNotFoundException("No address found for employee with id: "+empId);
+        }
+        return addressList.stream().map(address -> modelMapper.map(address, AddressDto.class)).toList();
     }
 
     private List<Address> saveOrUpdateAddressRequest(AddressRequest addressRequest)
