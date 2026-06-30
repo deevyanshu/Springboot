@@ -15,7 +15,7 @@ import java.util.Map;
 @Component
 public class JwtUtil {
 
-    public static final String SECRET_KEY="Adfhudfhodjdfhc46ibkdbubojifdpdjfsjbb"
+    public static final String SECRET_KEY="Adfhudfhodjdfhc46ibkdbubojifdpdjfsjbb";
     public String generateToken(String username){
 
         //claims is not necessary for this example, but you can add claims if you want to include additional information in the token
