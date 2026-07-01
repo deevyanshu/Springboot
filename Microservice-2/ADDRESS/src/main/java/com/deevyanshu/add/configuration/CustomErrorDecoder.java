@@ -5,6 +5,8 @@ import com.deevyanshu.add.Exception.ErrorResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import feign.Response;
 import feign.codec.ErrorDecoder;
+import org.apache.coyote.BadRequestException;
+import org.springframework.http.HttpStatus;
 
 import java.io.InputStream;
 
@@ -17,6 +19,11 @@ public class CustomErrorDecoder implements ErrorDecoder {
     // propagating the "User Not Found" reality.
     @Override
     public Exception decode(String s, Response response) {
+        int status= response.status();
+        if(status==503)
+        {
+            return new BadRequestException("Employee service is down");
+        }
         ObjectMapper objectMapper= new ObjectMapper();
         objectMapper.findAndRegisterModules();
         try(InputStream is=response.body().asInputStream()){
